@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Body */
+/* Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
     color: #fff;
@@ -28,7 +28,7 @@ body {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #ff7eb3;
     text-transform: uppercase;
@@ -64,12 +64,13 @@ body {
 }
 
 .glitch {
-    font-size: 3rem;
-    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .tagline {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
 }
 
@@ -80,7 +81,7 @@ body {
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     transition: transform 0.3s, background 0.3s;
 }
 
@@ -90,11 +91,108 @@ body {
     color: #fff;
 }
 
+/* About Section */
+.about {
+    padding: 4rem 10%;
+    background: #292929;
+    color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects {
+    padding: 4rem 10%;
+    background: #1c1c1c;
+    color: #fff;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 2rem;
+    background: #292929;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 10%;
+    text-align: center;
+    background: #292929;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact a {
+    font-size: 1.2rem;
+    color: #ff7eb3;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    padding: 1rem;
+    text-align: center;
+    background: #1c1c1c;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
 /* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .glitch {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        height: auto;
         padding: 1rem;
     }
 
@@ -102,45 +200,30 @@ body {
         flex-direction: column;
         gap: 1rem;
         width: 100%;
-        margin-top: 1rem;
     }
 
     .hero {
-        height: auto;
         padding: 2rem 1rem;
+        clip-path: none;
     }
 
     .glitch {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .tagline {
         font-size: 1rem;
     }
+
+    .button {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        height: auto;
-        padding: 0.5rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .nav-links a {
-        font-size: 1rem;
-    }
-
-    .hero {
-        padding: 1rem;
-        clip-path: none;
-        background: linear-gradient(135deg, #ff7eb3, #65a9ff);
-    }
-
     .glitch {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .tagline {
@@ -148,7 +231,21 @@ body {
     }
 
     .button {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    .projects h2,
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about p,
+    .projects p {
+        font-size: 1rem;
     }
 }
+
